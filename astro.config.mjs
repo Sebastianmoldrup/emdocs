@@ -19,7 +19,7 @@ export default defineConfig({
             // Each item here is one entry in the navigation menu.
             {
               label: 'Lånekalkulator',
-              link: '/guides/lanekalkulator/',
+              link: '/shortcodes/lanekalkulator/',
             },
           ],
         },
