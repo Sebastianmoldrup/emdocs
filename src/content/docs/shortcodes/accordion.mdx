@@ -1,0 +1,74 @@
+---
+title: Accordion dokumentasjon
+description: Dokumentasjon av bruk av accordion shortcode
+---
+
+import { Image } from 'astro:assets';
+import showcase from '../../../assets/accordion/showcase.mp4';
+import title from '../../../assets/accordion/title.webp';
+import content from '../../../assets/accordion/content.webp';
+
+## Template
+
+[accordion title="tittel"] content / tekst [/accordion]
+
+<video
+  width='320'
+  height='240'
+  autoplay
+  loop
+  muted
+  x-webkit-airplay='deny'
+  controlsList='nodownload'
+  class='rounded-md'
+>
+  <source src={showcase} type='video/mp4' />
+  Your browser does not support the video tag.
+</video>
+
+## Tittel
+
+[accordion title="tittel"]
+
+<Image
+  src={title}
+  alt='accordion title'
+  width='320'
+  height='120'
+  class='rounded-md'
+/>
+
+## Content / tekst
+
+[accordion] content / tekst [/accordion]
+
+<Image
+  src={content}
+  alt='accordion content'
+  width='320'
+  height='120'
+  class='rounded-md'
+/>
+
+## Custom styling css
+
+[accordion style="color: blue;"]
+
+<div class='text-lg font-semibold text-white'>Style eksempel</div>
+<ul>
+  <li>color: blue; = blå tekst farge</li>
+  <li>color: #ffffff; = hvit tekst farge</li>
+  <li>padding: 5px; = padding 5px</li>
+</ul>
+
+<div class='text-lg font-semibold text-white'>Additional css eksempel</div>
+<div>
+  Bruk css styling for å endre på selve accordion konteineren, du kan bruke
+  additional css for å endre på shortcoden med bruk av data-name="accordion"
+  <ul>
+    <li>data-name="accordion" = Kontainer</li>
+    <li>data-name="accordion" > summary = Tittel</li>
+    <li>data-name="accordion" > summary > = Pil / arrow</li>
+    <li>data-name="accordion" > div = tekst</li>
+  </ul>
+</div>

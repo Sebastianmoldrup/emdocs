@@ -8,7 +8,7 @@ import react from '@astrojs/react';
 export default defineConfig({
   integrations: [
     starlight({
-      title: 'Shortcode DOCS',
+      title: 'Hjem',
       // social: {
       //   github: 'https://github.com/withastro/starlight'
       // },
@@ -21,13 +21,11 @@ export default defineConfig({
               label: 'Lånekalkulator',
               link: '/shortcodes/lanekalkulator/',
             },
+            {
+              label: 'Accordion',
+              link: '/shortcodes/accordion/',
+            },
           ],
-        },
-        {
-          label: 'Annet',
-          autogenerate: {
-            directory: 'reference',
-          },
         },
       ],
     }),
