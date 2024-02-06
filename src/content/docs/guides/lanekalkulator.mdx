@@ -1,0 +1,106 @@
+---
+title: Forbrukslånskalkulator Dokumentasjon
+description: Dokumentasjon på bruk av lånekalkulator shortcode
+---
+
+import { Image } from 'astro:assets';
+import calculator from '../../../assets/lanekalkulator/lanekalkulator.webp';
+import title from '../../../assets/lanekalkulator/title.webp';
+import loan from '../../../assets/lanekalkulator/loan.webp';
+import interest from '../../../assets/lanekalkulator/interest.webp';
+import debt from '../../../assets/lanekalkulator/debt.webp';
+import term from '../../../assets/lanekalkulator/term.webp';
+import loanslider from '../../../assets/lanekalkulator/loanslider.webp';
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+Forbrukslånskalkulator er en WordPress shortcode som lar deg legge til en interaktiv lånekalkulator på finansrelaterte sider. Denne kalkulatoren gir brukerne mulighet til å beregne beløp, rente og årsbeløp basert på deres egne innganger, noe som gir en mer personlig og engasjerende brukeropplevelse.
+
+## Template
+
+[loan-calculator]
+
+<Image
+  src={calculator}
+  alt='kalkulator'
+  width='320'
+  height='120'
+  class='rounded-md'
+/>
+
+## Tittel
+
+[loan-calculator title="tittel"]
+
+<Image
+  src={title}
+  alt='kalkulator'
+  width='320'
+  height='120'
+  class='rounded-md'
+/>
+
+## Låne tekst
+
+[loan-calculator loan="låne beløp"]
+
+<Image
+  src={loan}
+  alt='kalkulator'
+  width='320'
+  height='120'
+  class='rounded-md'
+/>
+
+## Rente tekst
+
+[loan-calculator interest="rente tekst"]
+
+<Image
+  src={interest}
+  alt='kalkulator'
+  width='320'
+  height='120'
+  class='rounded-md'
+/>
+
+## År tekst
+
+[loan-calculator term="år tekst"]
+
+<Image
+  src={term}
+  alt='kalkulator'
+  width='320'
+  height='120'
+  class='rounded-md'
+/>
+
+## Månedlig kostnad tekst
+
+[loan-calculator debt="gjeld tekst"]
+
+<Image
+  src={debt}
+  alt='kalkulator'
+  width='320'
+  height='120'
+  class='rounded-md'
+/>
+
+## Slider min / max / steg / value
+
+<ul>
+  <li>Lånebeløp : [loan-calculator loan-value="10000, 500000, 5000, 60000"]</li>
+  <li>Rentebeløp : [loan-calculator interest-value="1, 50, 0.5, 3"]</li>
+  <li>Årsperiode : [loan-calculator term-value="5, 20, 1, 10"]</li>
+</ul>
+
+Eksempel:
+
+<Image
+  src={loanslider}
+  alt='shortcode explanation'
+  width='300'
+  height='120'
+  class='rounded-md'
+/>
